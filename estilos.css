@@ -1,0 +1,31 @@
+.rounded-circle {
+    display: inline-block;
+    width: 75px;
+}
+
+.footer-06 {
+    padding-top: 0 !important;
+    background: #302939;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.8;
+    font-weight: normal;
+}
+.footer-06:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    opacity: .2;
+    z-index: -1;
+    background: radial-gradient(ellipse at center, #d7b8ff 0%, rgba(255, 255, 255, 0) 100%);
+     }
+     
+    
