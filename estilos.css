@@ -27,5 +27,20 @@ body {
     z-index: -1;
     background: radial-gradient(ellipse at center, #d7b8ff 0%, rgba(255, 255, 255, 0) 100%);
      }
-     
     
+#cart-container table {
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+}
+     
+#cart-container table thead{
+    font-weight: 700;
+}
+    
+#cart-container table thead th{
+background: blue;
+color: #000;
+border: none;
+padding: 6px 0;
+}
