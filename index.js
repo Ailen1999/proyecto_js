@@ -1,32 +1,3 @@
-[
-	{
-		"precio": 150,
-		"id": 1,
-		"title": "Fideos",
-		"thumbnailUrl": "imgs/fideos.jpg"
-	},
-
-	{
-		"precio": 100,
-		"id": 2,
-		"title": "Pan",
-		"thumbnailUrl": "imgs/pan.jpeg"
-	},
-
-	{
-		"precio": 200,
-		"id": 3,
-		"title": "Salsa",
-		"thumbnailUrl": "imgs/salsa.jpeg"
-	},
-
-	{
-		"precio": 450,
-		"id": 4,
-		"title": "Ñoquis",
-		"thumbnailUrl": "imgs/ñoquis.jpeg"
-	}
-]
 class Producto {
     constructor(id, nombre, valor, descripcion, urlImagen) {
         this.id = id;
@@ -44,6 +15,7 @@ class Carrito {
     }
     //agrego productos al carrito
     agregarProductoAlCarrito(producto) {
+        alert("Tu producto fue agregado!")
         this.productos.push(producto);
         localStorage.setItem("carrito", JSON.stringify(this.productos));
     }
@@ -56,6 +28,40 @@ class Carrito {
     }
 
 }
+function cargarCarrito(){
+   
+	productos.forEach((element) => {
+		let container = document.getElementById("items");
+
+		let itemEnLaTabla = document.createElement("tr");
+		// Insertar HTML interno
+		itemEnLaTabla.innerHTML = "<th scope=\"row\">"+element.id+"</th>\
+		<td>"+element.nombre+"</td>\
+		<td>1</td>\
+		<td>$ <span>"+element.valor+"</span></td>"; 
+
+		container.append(itemEnLaTabla);
+		console.log(element)} );
+}
+
+function calcularTotal(){
+	let total = 0
+	productos.forEach(producto => {
+     total = producto.valor + total
+
+	})
+
+	let container = document.getElementById("footer")
+
+	container.innerHTML ="<th scope=\"row\" colspan=\"2\">Total productos</th>\
+	<td>"+ productos.length+"</td>\
+	<td class=\"font-weight-bold\">$ <span>"+total+"</span></td>";
+
+
+}
+let productos = JSON.parse(localStorage.getItem("carrito"));
+cargarCarrito();
+calcularTotal();
 
 
 const btnAgregarProdUno = document.getElementById("btn_1");
@@ -80,22 +86,7 @@ let listaProductos = [productoUno, productoDos, productoTres, productoCuatro, pr
 let total = 0
 
 
-//buscarProductoPorId(idDeProducto);
 
-
-/*let agregarOtroProducto = prompt("Desea agregar otro producto? (si o no)");
-
-if (agregarOtroProducto == "si") {
-    idDeProducto = prompt("Ingrese el id del producto que quiere comprar. (Valores del 1 al 8)");
-    buscarProductoPorId(idDeProducto);
-    alert("Ha seleccionado el maximo de productos, sera redirigido al carrito de compras");
-    verCarrito();
-}
-if (agregarOtroProducto == "no") {
-    verCarrito();
-
-}*/
-//Se muestra en pantalla el listado de producto dentro del carrito
 function verCarrito() {
     alert("Mi carrito")
     for (const producto of carrito.productos) {
