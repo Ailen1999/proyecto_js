@@ -1,0 +1,58 @@
+[
+    {
+    "id": 1, 
+    "nombre": "Alfombra para baños", 
+    "precio": 950, 
+    "descripcion": "Alfombra Suave para baños de rapida absorción", 
+    "imagen": "../imagenes/alfombra_limpieza.jpg"
+},
+{
+    "id": 2, 
+    "nombre": "Balde", 
+    "precio": 700, 
+    "descripcion": "Balde de 5 litros con manija resistente", 
+    "imagen": "../imagenes/balde_limpieza_2.png"
+},
+{
+    "id": 3, 
+    "nombre": "Jabon Dove", 
+    "precio": 300, 
+    "descripcion": "Jabon corporal cremoso con fragancia original", 
+    "imagen": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/671/329/products/dove1-6907d6323b5ac8e07716209365061142-640-0.jpg"
+},
+{
+    "id": 4, 
+    "nombre": "Cepillo", 
+    "precio": 1200, 
+    "descripcion": "Cepillo corporal para ducha de alta calidad", 
+    "imagen": "../imagenes/cepillo_espalda_limpieza.jpg"
+},
+{
+    "id": 5, 
+    "nombre": "Toallas femeninas", 
+    "precio": 450, 
+    "descripcion": "Toallas nocturnas talles a elección", 
+    "imagen": "../imagenes/toallitas_limpieza.jpg"
+},
+{
+    "id": 6, 
+    "nombre": "Desodorante pinol", 
+    "precio": 550, 
+    "descripcion": "Desodorante para pisos con fragancia a pino", 
+    "imagen": "../imagenes/desodorante_pisos.jpg"
+},
+{
+    "id": 7, 
+    "nombre": "Desodorante Dove", 
+    "precio": 890, 
+    "descripcion": "Desodorante sin alcohol fragancia original",
+    "imagen": "../imagenes/desodorante_limpieza.jpg"
+},
+{
+    "id": 8, 
+    "nombre": "Esponja Corporal", 
+    "precio": 620, 
+    "descripcion": "Esponja corporal para ducha de larga duración", 
+    "imagen": "../imagenes/esponja_cuerpo_limpieza.png"
+}
+]

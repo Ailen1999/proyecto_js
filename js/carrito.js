@@ -1,4 +1,5 @@
 let productos = JSON.parse(localStorage.getItem("carrito"))
+const btnFinalizar= document.querySelector("#btn-finalizar")
 function cargarCarrito() {
 	for (const element of productos) {
 
@@ -31,5 +32,32 @@ function calcularTotal() {
 
 
 }
+
+btnFinalizar.addEventListener("click", (e)=>{
+e.preventDefault()
+Swal.fire({
+	title: 'Gracias por tu compra!',
+	icon:'success',
+	width: 600,
+	padding: '3em',
+	color: '#716add',
+	background: '#fff url(/images/trees.png)',
+	backdrop: `
+	  rgba(0,0,123,0.4)
+	  url("../imagenes/Cat.gif")
+	  left top
+	  no-repeat
+	`
+}).then((result) => {
+	if (result.isConfirmed) {
+		setTimeout(() => {
+			window.location.href = "../index.html"
+		},1000);
+		localStorage.removeItem("carrito")
+	}
+  })
+
+})
+
 cargarCarrito();
 calcularTotal();
